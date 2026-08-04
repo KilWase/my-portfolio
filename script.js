@@ -1,52 +1,73 @@
-// Toggle mobile menu
-const menu = document.querySelector(".menu");
-const navLinks = document.querySelector(".nav-links");
+const themeToggle = document.getElementById("themeToggle");
 
-if (menu) {
-  menu.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-}
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
 
-    const target = document.querySelector(this.getAttribute("href"));
+    themeToggle.textContent =
+        document.body.classList.contains("dark-mode")
+        ? "☀️"
+        : "🌙";
+});
+const words = [
+  "Web Developer",
+  "Graphics Designer",
+  "AI Enthusiast"
+];
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
+let wordIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function typeEffect() {
+  const typingElement = document.getElementById("typing");
+
+  if (!typingElement) return;
+
+  if (typing) {
+    typingElement.textContent = words[wordIndex].substring(0, charIndex++);
+    if (charIndex > words[wordIndex].length) {
+      typing = false;
+      setTimeout(typeEffect, 1000);
+      return;
     }
+  } else {
+    typingElement.textContent = words[wordIndex].substring(0, charIndex--);
+    if (charIndex < 0) {
+      typing = true;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
 
-    if (navLinks) {
-      navLinks.classList.remove("active");
+  setTimeout(typeEffect, typing ? 120 : 70);
+}
+
+typeEffect();
+const faders = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     }
   });
 });
-// Back to Top button
+
+faders.forEach(section => {
+  observer.observe(section);
+});
 const topBtn = document.getElementById("topBtn");
 
 window.addEventListener("scroll", () => {
-  if (!topBtn) return;
-
-  if (window.scrollY > 300) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
+    if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
 });
 
-if (topBtn) {
-  topBtn.addEventListener("click", () => {
+topBtn.addEventListener("click", () => {
     window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+        top: 0,
+        behavior: "smooth"
     });
-  });
-}
-// Welcome message
-window.addEventListener("load", () => {
-  console.log("Welcome to StopEasy Restaurant!");
 });

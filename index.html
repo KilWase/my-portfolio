@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdulrahman Ibrahim | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <button id="topBtn">⬆</button>
 </head>
 <body>
 
@@ -19,26 +20,31 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="themeToggle" class="theme-btn">
+    🌙
+</button>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
 
-        <div class="hero-content">
-            <h1>Hello, I'm Abdulrahman Ibrahim</h1>
+    <div class="hero-content">
+        <h1>Hello, I'm Abdulrahman Ibrahim</h1>
 
-            <p>
-                Web Developer, Graphics Designer, and AI Enthusiast.
-                I build modern, responsive, and user-friendly websites.
-            </p>
+        <p>
+    <span id="typing"></span><br><br>
+    I build modern, responsive, and user-friendly websites.
+</p>
 
-            <a href="#projects" class="btn">🚀 View My Projects</a>
-        </div>
+        <a href="#projects" class="btn">🚀 View My Projects</a>
+<a href="CV.pdf" class="btn secondary-btn" download>📄 Download CV</a>
+    </div>
 
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Abdulrahman Ibrahim">
-        </div>
+    <div class="hero-image">
+        <img src="profile.jpg" alt="Abdulrahman Ibrahim">
+    </div>
 
+</section>
     </section>
     <!-- About -->
 <section id="about" class="about">
@@ -52,7 +58,7 @@
 </section>
 
 <!-- Skills -->
-<section id="skills" class="skills">
+<section id="about" class="about fade">
 
     <h2>💻 My Skills</h2>
 
@@ -70,7 +76,8 @@
 </section>
 
 <!-- Projects -->
-<section id="projects" class="projects">
+<section id="projects" class="project
+fade">
 
     <h2>📂 My Projects</h2>
 
@@ -82,28 +89,177 @@
         </div>
 
         <div class="project-card">
-            <h3>🛒 ShopEasy</h3>
-            <p>A modern e-commerce website with animations and responsive design.</p>
+    <img src="ShopEasy.png" alt="ShopEasy">
+    <h3>ShopEasy</h3>
+    <p>A modern online shopping website built with HTML, CSS and JavaScript.</p>
+    <a href="YOUR_SHOPEASY_LINK">View Live</a>
+</div>
+  
+   href="https://kilwase.github.io/stopEasy/" target="_blank">View Live</a>
+</div> 
+
+    </div>
+<!-- Services -->
+<section id="services" class="services fade">
+    <h2>What I Offer</h2>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <h3>🌐 Responsive Websites</h3>
+            <p>I build modern websites that work perfectly on phones, tablets, and desktops.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>🛒 Business Websites</h3>
+            <p>Professional websites for restaurants, shops, portfolios, and small businesses.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>⚡ Fast & Clean Design</h3>
+            <p>Simple, attractive, and user-friendly designs with clean code.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>🔧 Website Maintenance</h3>
+            <p>I can update, improve, and fix existing websites whenever needed.</p>
         </div>
 
     </div>
-
 </section>
+<!-- Why Choose Me -->
+<section class="why-me" id="why">
+    <h2>Why Choose Me?</h2>
 
+    <div class="why-container">
+        <div class="why-card">
+            <h3>⚡ Fast Delivery</h3>
+            <p>I deliver clean and responsive websites on time.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>💻 Clean Code</h3>
+            <p>My websites are built with organized HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>📱 Mobile Friendly</h3>
+            <p>Every website works smoothly on phones, tablets, and desktops.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>🤝 Easy Communication</h3>
+            <p>I listen carefully and build websites that match clients' needs.</p>
+        </div>
+    </div>
+</section>
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+    <h2>💬 Testimonials</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>"Very professional and delivered exactly what I wanted. Highly recommended!"</p>
+            <h4>— Future Client</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"The website was clean, responsive, and fast. Great work!"</p>
+            <h4>— Happy Customer</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Excellent communication and attention to detail. I would hire him again."</p>
+            <h4>— Business Owner</h4>
+        </div>
+
+    </div>
+</section>
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials">
+    <h2>⭐ Testimonials</h2>
+
+    <div class="testimonial-card">
+        <p>"Abdulrahman delivered my website on time and the design was clean and responsive."</p>
+        <h4>- Happy Client</h4>
+    </div>
+
+    <div class="testimonial-card">
+        <p>"Great communication and very professional. I highly recommend him."</p>
+        <h4>- Business Owner</h4>
+    </div>
+</section>
 <!-- Contact -->
-<section id="contact" class="contact">
-
+<<section id="contact" class="contact fade">
     <h2>📞 Contact Me</h2>
 
-    <p>📧 Email: abdulramanibrahim5135@gmail.com</p>
+    <p>📧 Email: abdulrahmanibrahim5135@gmail.com</p>
     <p>📱 Phone: +234 704 717 564</p>
+    <p>💻 GitHub:
+    <a href="https://github.com/YOUR_USERNAME" target="_blank">
+        github.com/YOUR_USERNAME
+    </a>
+</p>
+</section>
+<p>📱 WhatsApp:
+    <a href="https://wa.me/234704717564" target="_blank">
+        Chat with me
+    </a>
+</p>
 
+<p>📘 Facebook:
+    <a href="https://facebook.com/YOUR_FACEBOOK_USERNAME" target="_blank">
+        Facebook
+    </a>
+</p>
+
+<section class="stats">
+    <div class="stat-card">
+        <h2>3+</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>100%</h2>
+        <p>Responsive Designs</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>3</h2>
+        <p>Technologies Used</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>∞</h2>
+        <p>Always Learning</p>
+    </div>
 </section>
 
 <footer>
     <p>&copy; 2026 Abdulrahman Ibrahim. All Rights Reserved.</p>
 </footer>
+<!-- Call To Action -->
+<section class="cta">
 
+    <h2>Let's Build Something Amazing Together!</h2>
+
+    <p>
+        I'm available for freelance projects, business websites,
+        portfolio websites, and front-end development.
+    </p>
+
+    <div class="cta-buttons">
+
+        <a href="#contact" class="btn">Hire Me</a>
+
+        <a href="cv.pdf" class="btn" download>
+            Download CV
+        </a>
+
+    </div>
+
+</section>
 <script src="script.js"></script>
 
 </body>
